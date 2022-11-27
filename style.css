@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  color: #000;
+  font-family: sans-serif;
+  /* might want to have border around the body when the time
+  comes */
+  /* border: 4px solid #000; */
+}
+
+.shoe-name {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 10px 12px;
+  /* margin-bottom: 15px; */
+}
+
+.products {
+  /* display: flex; */
+  border: 2px solid #000;
+  width: 825px;
+  margin: 50px auto;
+  position: relative;
+}
+.img-shoe {
+  width: 200px;
+}
+
+.price {
+  color: #aaaaaa;
+  font-size: 20px;
+  /* margin-bottom: 5px; */
+  position: relative;
+}
+
+.price::after {
+  content: "Free Shipping";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 36px;
+  color: #acacac;
+  font-size: 15px;
+}
+
+.sale-label {
+  background-color: #f00;
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  letter-spacing: 1.5px;
+  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: -25px;
+}
+
+.short-descrip {
+  margin-top: 18px;
+}
+/* this won't work */
+
+/* .price::after {
+  content: "Free shipping";
+  font-size: 10px;
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+} */
+
+.info-link:link,
+.info-link:visited {
+  color: #000;
+}
+
+/* p {
+  margin-bottom: 15px;
+} */
+.info-link:hover,
+.info-link:active {
+  font-weight: bold;
+}
+
+.product-details {
+  margin-bottom: 8px;
+}
+
+ul {
+  margin-left: 24px;
+}
+li {
+  margin-bottom: 5px;
+}
+.color {
+  background-color: #000;
+  width: 24px;
+  height: 24px;
+  margin-top: 15px;
+}
+
+.blue {
+  background-color: #5c5cec;
+}
+
+.red {
+  background-color: #c44d4d;
+}
+
+.yellow {
+  background-color: #adad3a;
+}
+
+.green {
+  background-color: #4ab34a;
+}
+
+.brown {
+  background-color: #703131;
+}
+
+.cart-button {
+  width: 100%;
+  color: #fff;
+  background-color: #000;
+  padding: 15px;
+  border-top: 2px solid #000;
+}
+
+.cart-button:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+}
+
+/* flexbox */
+/* .price-info {
+  flex: 1;
+   position: relative; 
+
+  align-items: flex-start; 
+}
+.row {
+  display: flex;
+  gap: 25px;
+}
+.product-colors {
+  display: flex;
+  gap: 2px;
+  /* justify-content: space-between; *
+}
+.product-info {
+  flex: 1;
+} */
+
+/* using CSS GRID */
+.products {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  /* row-gap: 20px; */
+  column-gap: 20px;
+}
+
+.shoe-name {
+  grid-column: 1 / -1;
+}
+.price-info {
+}
+/* used flex for this 1D  */
+.product-colors {
+  display: flex;
+  gap: 2px;
+}
+
+.cart-button {
+  grid-column: 1 / -1;
+}
